@@ -1,7 +1,12 @@
 package com.avianca.asl.domain;
 
 import java.io.Serializable;
-
+/**
+ * 
+ * @author CBYK - Ricardo Almeida
+ * @since 16/06/2016
+ * @version 1.0.0
+ */
 public class Authorization implements Serializable {
 
 	private static final long serialVersionUID = 1L;

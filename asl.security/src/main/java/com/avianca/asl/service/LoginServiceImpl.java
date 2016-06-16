@@ -11,10 +11,10 @@ import com.avianca.asl.domain.User;
  * @since 16/06/2016
  * @version 1.0.0
  */
-public class LoginImpl implements Login{
+public class LoginServiceImpl implements LoginService{
 
 	@Override
-	public Authorization logar(User user) throws Exception {
+	public Authorization logar(String user,String pwd) throws Exception {
 		// TODO Auto-generated method stub
 		
 		return null;
@@ -29,7 +29,7 @@ public class LoginImpl implements Login{
 	 * Retorna uma autorização com uma sessão e um token, relacionado ao 
 	 * usuario que se autenicou, gera um token pega a sessão.
 	 */
-	public Authorization loginTest(User user) throws Exception {
+	public Authorization loginTest(String user,String pwd) throws Exception {
 		/*
 		 * aqui chama o serviço que valida o usuário, cria e gerencia o token
 		   gera a session, e devolve a autorização parausar o sistema
