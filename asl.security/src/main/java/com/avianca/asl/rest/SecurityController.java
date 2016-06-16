@@ -30,7 +30,7 @@ public class SecurityController {
 	private LoginServiceImpl usuarioService;
 	
 	@RequestMapping(value = "/login/user/{user}/pwd{pwd}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> retrieve(@PathVariable("user") String user,@PathVariable("pwd") String pwd) {
+	public ResponseEntity<Authorization> retrieve(@PathVariable("user") String user,@PathVariable("pwd") String pwd) {
 		//logger.info("SecurityController.retrive");	
 		
 		Authorization authorization = null;
@@ -38,11 +38,12 @@ public class SecurityController {
 			authorization = usuarioService.loginTest(user,pwd);
 			
 		} catch (Exception e) {
-			return new ResponseEntity<String>("{\"error\":[{\"codigo\":\"" +HttpStatus.BAD_REQUEST+ "\"}]}", HttpStatus.OK);
+			//return new ResponseEntity<String>("{\"error\":[{\"codigo\":\"" +HttpStatus.BAD_REQUEST+ "\"}]}", HttpStatus.OK);
 		}		
 		
 	/*	return new ResponseEntity<Authorization>("{\"authentication\":[{\"sessao\":\"" + authorization.getSession() + "\"}]}", HttpStatus.OK);*/
-		return new ResponseEntity<String>("{\"authentication\":[{\"sessao\":\""+authorization.getSession()+"\"}]}", HttpStatus.OK);
+	//	return new ResponseEntity<String>("{\"authentication\":[{\"sessao\":\""+authorization.getSession()+"\"}]}", HttpStatus.OK);
+		return new ResponseEntity<Authorization>(authorization, HttpStatus.FOUND);//302  
 		
 	}
 
