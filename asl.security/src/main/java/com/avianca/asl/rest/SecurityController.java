@@ -3,11 +3,10 @@ package com.avianca.asl.rest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 
 
 
@@ -18,17 +17,15 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  */
 
-@Path("/")
-@Component
+@Path("/test")
 public class SecurityController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	
-	/*
-	@GET
-    @Produces(MediaType.APPLICATION_ATOM_XML)
-    @Path("/hello")
-    public String hello() {
-        return "Hello World";
-    }*/
+
+	 	@GET
+	    @Produces(MediaType.APPLICATION_JSON)
+	    @Path("/test")
+	    public String message() {
+	        return "teste okay";
+	    }
 
 }
