@@ -1,6 +1,7 @@
 com\avianca\asl\service\LoginService.class
 com\avianca\asl\rest\SecurityController.class
 com\avianca\asl\domain\Authorization.class
+com\avianca\asl\rest\CarroController.class
 com\avianva\Application.class
 com\avianca\asl\service\LoginServiceImpl.class
 com\avianca\asl\domain\Token.class
