@@ -1,8 +1,0 @@
-com\avianca\asl\service\LoginService.class
-com\avianca\asl\rest\SecurityController.class
-com\avianca\asl\service\LoginServiceImpl.class
-com\avianca\asl\domain\User.class
-com\avianca\asl\domain\Authorization.class
-com\avianca\asl\security\App.class
-com\avianca\asl\domain\Token.class
-com\avianca\asl\domain\Session.class

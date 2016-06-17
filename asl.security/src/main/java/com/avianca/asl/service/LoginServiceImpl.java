@@ -33,6 +33,7 @@ public class LoginServiceImpl implements LoginService{
 		/*
 		 * aqui chama o serviço que valida o usuário, cria e gerencia o token
 		   gera a session, e devolve a autorização parausar o sistema
+		   aqui toda logica de negocio
 		*/
 		
 		Token token = new Token();
